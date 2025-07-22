@@ -6,7 +6,7 @@
 
 const test = document.getElementById('status');
 const output = document.getElementById('output');
-const time = document.getElementById('test');
+const time = document.getElementById('time');
 if ('geolocation' in navigator) {
     navigator.geolocation.getCurrentPosition((position) => {
         const { latitude, longitude, accuracy } = position.coords;
