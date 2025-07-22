@@ -27,14 +27,12 @@ if ('geolocation' in navigator) {
     test.textContent = 'Geolocation is not supported by your device.';
 }
 
-if (navigator.online) {
+if (navigator.onLine) {
     fetch("north-america.pool.ntp.org")
         .then(response => response.json())
         .then(data => {
-            if (navigator.onLine) {
-                time.textContent = `Current time: ${data.datetime}`;
-            } else {
-                time.textContent = `Last known time: ${data.datetime}`;
-            }
+            time.textContent = `Current time: ${data.datetime}`;
         })
+} else {
+    time.textContent = "Not online";
 }
