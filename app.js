@@ -32,9 +32,9 @@ if (navigator.onLine) {
     fetch("https://worldtimeapi.org/api/ip")
         .then(response => response.json())
         .then(data => {
-            console.log(data.datetime);
+            localStorage.setItem("time", data.datetime);
             time.textContent = `Current time: ${data.datetime}`;
         })
 } else {
-    time.textContent = "Not online";
+    time.textContent = `Last checked time: ${localStorage.getItem("time")}`;
 }
