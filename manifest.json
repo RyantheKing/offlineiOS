@@ -1,8 +1,8 @@
 {
   "name": "Offline iOS Demo",
   "short_name": "Offline",
-  "theme_color": "#ffcbe4",
-  "background_color": "#fa99ca",
+  "theme_color": "#4E16B2",
+  "background_color": "#0020E5",
   "start_url": ".",
   "display": "standalone",
   "scope": "/",
