@@ -3,9 +3,9 @@
   "short_name": "Offline",
   "theme_color": "#4E16B2",
   "background_color": "#0020E5",
-  "start_url": "https://ryantheking.github.io/offlineiOS/",
+  "start_url": ".",
   "display": "standalone",
-  "scope": "/offlineiOS",
+  "scope": "/",
   "icons": [
     {
       "src": "pouchdb.png",
