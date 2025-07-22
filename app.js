@@ -14,7 +14,11 @@ if ('geolocation' in navigator) {
             `Latitude:  ${latitude}\n` +
             `Longitude: ${longitude}\n` +
             `Accuracy:  ±${accuracy} meters`;
-    }, {
+    },
+    err => {
+        test.textContent = `Error (${err.code}): ${err.message}`;
+    },
+    {
         enableHighAccuracy: true,
         maximumAge: 0,
         timeout: 10000
