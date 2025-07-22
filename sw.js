@@ -1,5 +1,5 @@
 const cacheName = 'offline-ios-pwa';
-const assets = ['/offlineiOS/', '/offlineiOS/index.html', '/offlineiOS/app.js', '/offlineiOS/manifest.json', '/offlineiOS/pouchdb.png', '/offlineiOS/favicon.ico'];
+const assets = ['/', 'index.html', 'app.js', 'manifest.json', 'pouchdb.png', 'favicon.ico'];
 
 self.addEventListener("install", function(event) {
     event.waitUntil(preLoad());
@@ -7,6 +7,7 @@ self.addEventListener("install", function(event) {
 
 self.addEventListener("fetch", function(event) {
     event.respondWith(checkResponse(event.request).catch(function() {
+        console.log(event.request);
         return returnFromCache(event.request);
     }));
     event.waitUntil(addToCache(event.request));
