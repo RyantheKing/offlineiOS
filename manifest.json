@@ -5,7 +5,7 @@
   "background_color": "#0020E5",
   "start_url": ".",
   "display": "standalone",
-  "scope": "/offlineiOS/",
+  "scope": "/",
   "icons": [
     {
       "src": "pouchdb.png",
