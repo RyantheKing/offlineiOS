@@ -6,6 +6,7 @@
 
 const test = document.getElementById('status');
 const output = document.getElementById('output');
+const time = document.getElementById('test');
 if ('geolocation' in navigator) {
     navigator.geolocation.getCurrentPosition((position) => {
         const { latitude, longitude, accuracy } = position.coords;
@@ -28,9 +29,10 @@ if ('geolocation' in navigator) {
 }
 
 if (navigator.onLine) {
-    fetch("north-america.pool.ntp.org")
+    fetch("https://worldtimeapi.org/api/ip")
         .then(response => response.json())
         .then(data => {
+            console.log(data.datetime);
             time.textContent = `Current time: ${data.datetime}`;
         })
 } else {
