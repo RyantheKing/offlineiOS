@@ -3,7 +3,7 @@
   "short_name": "Offline",
   "theme_color": "#4E16B2",
   "background_color": "#0020E5",
-  "start_url": ".",
+  "start_url": "https://ryantheking.github.io/offlineiOS/",
   "display": "standalone",
   "scope": "/offlineiOS",
   "icons": [
