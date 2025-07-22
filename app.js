@@ -1,5 +1,5 @@
 if (!navigator.serviceWorker.controller) {
-    navigator.serviceWorker.register("/sw.js").then(function(reg) {
+    navigator.serviceWorker.register("/offlineiOS/sw.js").then(function(reg) {
         console.log("Service worker has been registered for the scope: " + reg.scope);
     });
 }
